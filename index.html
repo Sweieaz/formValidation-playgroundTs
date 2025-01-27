@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/formValidation.css" />
+    <script defer src="./dist/formValidation.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="userform">
+      <form action="" class="signUpForm">
+        <div class="emailField">
+          <label for="email" class="emailLabel">Email </label>
+          <div class="inputIdField">
+            <input
+              type="email"
+              id="emailId"
+              name="useremail"
+              placeholder="enter your email address"
+              autofocus
+            />
+          </div>
+          <div id="error"></div>
+        </div>
+
+        <button type="submit" class="signUpButton">Sign Up</button>
+        <div id="success"></div>
+      </form>
+    </div>
+  </body>
+</html>

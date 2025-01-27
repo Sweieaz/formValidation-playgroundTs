@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.userform {
+  background-color: FFFFFF;
+  display: flex;
+  flex-direction: column;
+  width: 449px;
+  height: 184px;
+  margin: auto;
+  margin-top: 155px;
+  font-family: 'Inter';
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.2px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.emailField {
+  width: 393px;
+  padding-bottom: 24px;
+}
+
+.emailLabel {
+  color: #000000;
+  font-size: 14px;
+}
+
+#emailId {
+  width: 393px;
+  height: 41px;
+  padding: 12px 16px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 0.2px solid #e0e0e0;
+  background-color: #ffffff;
+  color: #000000;
+  font-style: normal;
+  font-size: 17px;
+  word-spacing: 10px;
+}
+
+#emailId:focus {
+  outline-color: #60a5fa;
+  background-color: #ddd;
+}
+
+.signUpButton:hover {
+  background-color: #1346b7;
+}
+
+.signUpButton {
+  width: 393px;
+  height: 41px;
+  border-radius: 8px;
+  border: none;
+  color: #ddd;
+  font-size: 14px;
+  background-color: #1a56db;
+}
+
+.error {
+  color: #ff3860;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.success {
+  padding-top: 24px;
+  color: #00aa4a;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
