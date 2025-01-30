@@ -2,7 +2,7 @@ const signupForm = document.querySelector<HTMLFormElement>('.signUpForm');
 const userEmail = document.querySelector<HTMLInputElement>('#emailId');
 const errorMessage = document.querySelector<HTMLElement>('#error');
 const successMessage = document.querySelector<HTMLElement>('#success');
-const userForm = document.querySelector<HTMLElement>('.userform');
+const formContainer = document.querySelector<HTMLElement>('.formContainer');
 
 enum Message {
   ERRORMESSAGE = 'This email already exists in our records',
@@ -11,8 +11,14 @@ enum Message {
 
 let prevEmailValue: string = '';
 
-if (signupForm && userEmail && errorMessage && successMessage && userForm) {
-  const signForm = function (event: Event): void {
+if (
+  signupForm &&
+  userEmail &&
+  errorMessage &&
+  successMessage &&
+  formContainer
+) {
+  const signForm = function (event: SubmitEvent): void {
     event.preventDefault();
 
     const emailValue: string = userEmail.value.trim();
@@ -21,13 +27,13 @@ if (signupForm && userEmail && errorMessage && successMessage && userForm) {
       errorMessage.textContent = Message.ERRORMESSAGE;
       successMessage.textContent = '';
       errorMessage.className = 'error';
-      userForm.style.height = '212px';
+      formContainer.style.height = '212px';
     } else {
       prevEmailValue = emailValue;
       successMessage.textContent = Message.SUCCESSMESSAGE;
       errorMessage.textContent = '';
       successMessage.className = 'success';
-      userForm.style.height = '228px';
+      formContainer.style.height = '228px';
     }
     userEmail.value = '';
   };
@@ -36,3 +42,15 @@ if (signupForm && userEmail && errorMessage && successMessage && userForm) {
 } else {
   console.error('One or more required elements are missing in the DOM.');
 }
+
+function testClickHandler(event: Event) {
+  console.log(event.target);
+}
+
+document.getElementById('testBtn')?.addEventListener('click', testClickHandler);
+
+// document.addEventListener('domContentLoaded', () => {
+//   document
+//     .getElementById('testBtn')
+//     ?.addEventListener('click', testClickHandler);
+// });

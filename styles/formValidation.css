@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.userform {
+.formContainer {
   background-color: FFFFFF;
   display: flex;
   flex-direction: column;
